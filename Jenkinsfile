@@ -2,13 +2,6 @@
 
 pipeline {
 
-  println "${it}"
-  println "${params.properties}"
-
-  tools {
-    jdk "jdk7"
-  }
-
   agent any
 
     stages {
