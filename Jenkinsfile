@@ -1,9 +1,8 @@
 #!/usr/bin/env groovy
 
-node{
-  pipeline {
+pipeline {
 
-    agent any
+  agent any
 
     stages {
       stage('Build') {
@@ -23,5 +22,4 @@ node{
         }
       }
     }
-  }
 }
