@@ -2,7 +2,15 @@
 
 pipeline {
 
-  agent { node { label 'labelName' } }
+  agent any
+
+  parameters {
+    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+  }
+
+  tools {
+    maven 'apache-maven-3.0.1'
+  }
 
   stages {
     stage('Build') {
@@ -20,6 +28,16 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
+      }
+    }
+    stage('Example') {
+      steps {
+        echo "Hello ${params.PERSON}"
+      }
+    }
+    stage('Example2') {
+      steps {
+        sh 'mvn --version'
       }
     }
   }
