@@ -2,8 +2,8 @@
 
 pipeline {
 
-  echo "${it}"
-  echo "${params.properties}"
+  println "${it}"
+  println "${params.properties}"
 
   tools {
     jdk "jdk7"
