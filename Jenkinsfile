@@ -40,5 +40,11 @@ pipeline {
         sh 'mvn --version'
       }
     }
+    stage("Clean and compile"){
+      steps{
+        sh './grailsw clean --plain-output --non-interactive'
+        sh 'rm -fR target/test-reports'
+      }
+    }
   }
 }
