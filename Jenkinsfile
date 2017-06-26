@@ -6,7 +6,7 @@ pipeline {
 
   tools {
     maven 'apache-maven-3.0.1'
-    jdk 'JDK7u80'
+    //jdk 'JDK7u80'
   }
 
   stages {
