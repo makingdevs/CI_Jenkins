@@ -38,5 +38,10 @@ pipeline {
         sh 'rm -fR target/test-reports'
       }
     }
+    stage("Unit test"){
+      steps{
+        sh './grailsw test-app -unit '
+      }
+    }
   }
 }
