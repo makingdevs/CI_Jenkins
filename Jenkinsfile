@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo "Deploy config with environment: ${env.BRANCH_NAME} namespace: ${getNamespace(env.BRANCH_NAME)}"
+        echo "Deploy config with environment: ${env.BRANCH_NAME} "
         echo 'Building..'
         echo "${env.properties}"
       }
