@@ -2,7 +2,7 @@
 
 pipeline {
 
-  agent {
+  agent("someValue") {
     node {
       def imageTag = "${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
       def namespace = getNamespace(env.BRANCH_NAME)
